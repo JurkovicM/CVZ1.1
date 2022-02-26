@@ -1,20 +1,85 @@
-from fullyproxy import *
-import socket
-import sys
+#    Copyright 2014 Philippe THIRION
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import socketserver
+import re
 # import string
 # import threading
 import time
 import logging
 
+HOST, PORT = '0.0.0.0', 5060
+rx_register = re.compile("^REGISTER")
+rx_invite = re.compile("^INVITE")
+rx_ack = re.compile("^ACK")
+rx_prack = re.compile("^PRACK")
+rx_cancel = re.compile("^CANCEL")
+rx_bye = re.compile("^BYE")
+rx_options = re.compile("^OPTIONS")
+rx_subscribe = re.compile("^SUBSCRIBE")
+rx_publish = re.compile("^PUBLISH")
+rx_notify = re.compile("^NOTIFY")
+rx_info = re.compile("^INFO")
+rx_message = re.compile("^MESSAGE")
+rx_refer = re.compile("^REFER")
+rx_update = re.compile("^UPDATE")
+rx_from = re.compile("^From:")
+rx_cfrom = re.compile("^f:")
+rx_to = re.compile("^To:")
+rx_cto = re.compile("^t:")
+rx_tag = re.compile(";tag")
+rx_contact = re.compile("^Contact:")
+rx_ccontact = re.compile("^m:")
+rx_uri = re.compile("sip:([^@]*)@([^;>$]*)")
+rx_addr = re.compile("sip:([^ ;>$]*)")
+# rx_addrport = re.compile("([^:]*):(.*)")
+rx_code = re.compile("^SIP/2.0 ([^ ]*)")
+# rx_cseq = re.compile("^CSeq:")
+# rx_callid = re.compile("Call-ID: (.*)$")
+# rx_rr = re.compile("^Record-Route:")
+rx_request_uri = re.compile("^([^ ]*) sip:([^ ]*) SIP/2.0")
+rx_route = re.compile("^Route:")
+rx_contentlength = re.compile("^Content-Length:")
+rx_ccontentlength = re.compile("^l:")
+rx_via = re.compile("^Via:")
+rx_cvia = re.compile("^v:")
+rx_branch = re.compile(";branch=([^;]*)")
+rx_rport = re.compile(";rport$|;rport;")
+rx_contact_expires = re.compile("expires=([^;$]*)")
+rx_expires = re.compile("^Expires: (.*)$")
+
+# global dictionnary
+recordroute = ""
+topvia = ""
+registrar = {}
 
 
+def hexdump(chars, sep, width):
+    while chars:
+        line = chars[:width]
+        chars = chars[width:]
+        line = line.ljust(width, '\000')
+        logging.debug("%s%s%s" % (sep.join("%02x" % ord(c) for c in line), sep, quotechars(line)))
 
 
+def quotechars(chars):
+    return ''.join(['.', c][c.isalnum()] for c in chars)
 
 
-
+def showtime():
+    logging.debug(time.strftime("(%H:%M:%S)", time.localtime()))
 
 
 class UDPHandler(socketserver.BaseRequestHandler):
@@ -343,23 +408,3 @@ class UDPHandler(socketserver.BaseRequestHandler):
                 hexdump(data, ' ', 16)
                 logging.warning("---")
 
-def start():
-
-    pass
-
-
-if __name__ == "__main__":
-    logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s', filename='proxy.log', level=logging.INFO,
-                        datefmt='%H:%M:%S')
-    logging.info(time.strftime("%a, %d %b %Y %H:%M:%S ", time.localtime()))
-    hostname = socket.gethostname()
-    logging.info(hostname)
-    ipaddress = "192.168.0.103"
-    if ipaddress == "127.0.0.1":
-        ipaddress = sys.argv[1]
-    logging.info(ipaddress)
-    recordroute = "Record-Route: <sip:%s:%d;lr>" % (ipaddress, PORT)
-    topvia = "Via: SIP/2.0/UDP %s:%d" % (ipaddress, PORT)
-    server = socketserver.UDPServer((HOST, PORT), UDPHandler)
-    print("Proxy server started at <%s:%s>" % (ipaddress, PORT))
-    server.serve_forever()
