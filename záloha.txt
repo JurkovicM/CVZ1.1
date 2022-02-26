@@ -282,7 +282,7 @@ class UDPHandler(socketserver.BaseRequestHandler):
                 # insert Record-Route
                 data.insert(1, recordroute)
                 text = "\r\n".join(data)
-                socket.sendto(text.encode("utf-8"), claddr)
+                socket.sendto(text, claddr)
                 showtime()
                 logging.info("<<< %s" % data[0])
                 logging.debug("---\n<< server send [%d]:\n%s\n---" % (len(text), text))
@@ -306,7 +306,7 @@ class UDPHandler(socketserver.BaseRequestHandler):
                 # insert Record-Route
                 data.insert(1, recordroute)
                 text = "\r\n".join(data)
-                socket.sendto(text.encode("utf-8"), claddr)
+                socket.sendto(text, claddr)
                 showtime()
                 logging.info("<<< %s" % data[0])
                 logging.debug("---\n<< server send [%d]:\n%s\n---" % (len(text), text))
@@ -330,7 +330,7 @@ class UDPHandler(socketserver.BaseRequestHandler):
                 # insert Record-Route
                 data.insert(1, recordroute)
                 text = "\r\n".join(data)
-                socket.sendto(text.encode("utf-8"), claddr)
+                socket.sendto(text, claddr)
                 showtime()
                 logging.info("<<< %s" % data[0])
                 logging.debug("---\n<< server send [%d]:\n%s\n---" % (len(text), text))
@@ -348,7 +348,7 @@ class UDPHandler(socketserver.BaseRequestHandler):
                 self.data = self.removeRouteHeader()
                 data = self.removeTopVia()
                 text = "\r\n".join(data)
-                socket.sendto(text.encode("utf-8"), claddr)
+                socket.sendto(text, claddr)
                 showtime()
                 logging.info("<<< %s" % data[0])
                 logging.debug("---\n<< server send [%d]:\n%s\n---" % (len(text), text))
@@ -417,8 +417,8 @@ if __name__ == "__main__":
     logging.info(time.strftime("%a, %d %b %Y %H:%M:%S ", time.localtime()))
     hostname = socket.gethostname()
     logging.info(hostname)
-    ipaddress = "192.168.0.103"
-    if ipaddress == "127.0.0.1":
+    ipaddress = socket.gethostbyname(hostname)
+    if ipaddress == "localhost":
         ipaddress = sys.argv[1]
     logging.info(ipaddress)
     recordroute = "Record-Route: <sip:%s:%d;lr>" % (ipaddress, PORT)
