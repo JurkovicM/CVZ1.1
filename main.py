@@ -438,18 +438,17 @@ def start():
     if ipaddress == "127.0.0.1":
         ipaddress = sys.argv[1]
     logging.info(ipaddress)
+
     return ipaddress
     pass
 
 
 if __name__ == "__main__":
     ipaddress = start()
-
-
-
     recordroute = "Record-Route: <sip:%s:%d;lr>" % (ipaddress, PORT)
     topvia = "Via: SIP/2.0/UDP %s:%d" % (ipaddress, PORT)
     server = socketserver.UDPServer((HOST, PORT), UDPHandler)
     print("Proxy server started at <%s:%s>" % (ipaddress, PORT))
     server.serve_forever()
+
 
