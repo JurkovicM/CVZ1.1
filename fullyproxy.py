@@ -15,10 +15,9 @@
 
 import socketserver
 import re
-# import string
-# import threading
 import time
 import logging
+
 
 HOST, PORT = '0.0.0.0', 5060
 rx_register = re.compile("^REGISTER")
