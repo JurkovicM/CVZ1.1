@@ -7,18 +7,14 @@ import socketserver
 import time
 import logging
 
-
-
-if __name__ == "__main__":
-
-
-
+def start():
     logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s', filename='proxy.log', level=logging.INFO,
                         datefmt='%H:%M:%S')
     logging.info(time.strftime("%a, %d %b %Y %H:%M:%S ", time.localtime()))
     hostname = socket.gethostname()
     logging.info(hostname)
-    ipaddress = "192.168.0.107"
+    print("Please enter ip address of proxy:")
+    ipaddress = input()
     if ipaddress == "127.0.0.1":
         ipaddress = sys.argv[1]
     logging.info(ipaddress)
@@ -29,6 +25,11 @@ if __name__ == "__main__":
     server = socketserver.UDPServer((HOST, PORT), UDPHandler)
     print("Proxy server started at <%s:%s>" % (ipaddress, PORT))
     server.serve_forever()
+    pass
+
+if __name__ == "__main__":
+    start()
+
 
 
 
