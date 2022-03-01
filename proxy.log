@@ -3125,3 +3125,320 @@
 16:41:45:INFO:<<< SIP/2.0 200 OkHE
 16:41:47:INFO:>>> REGISTER sip:192.168.0.101 SIP/2.0
 16:41:47:INFO:<<< SIP/2.0 200 OkHE
+17:01:14:INFO:Tue, 01 Mar 2022 17:01:14 
+17:01:14:INFO:DESKTOP-UVDVQBN
+17:01:33:INFO:192.168.0.101
+17:02:25:INFO:>>> REGISTER sip:192.168.0.101 SIP/2.0
+17:02:25:INFO:From: de@192.168.0.101 - Contact: 192.168.0.100:37017
+17:02:25:INFO:<<< SIP/2.0 200 0KHE
+17:02:29:INFO:>>> REGISTER sip:192.168.0.101 SIP/2.0
+17:02:29:INFO:<<< SIP/2.0 200 OkHE
+17:02:32:INFO:>>> REGISTER sip:192.168.0.101 SIP/2.0
+17:02:32:INFO:From: de@192.168.0.101 - Contact: 192.168.0.100:49055
+17:02:32:INFO:<<< SIP/2.0 200 0KHE
+17:02:37:INFO:>>> REGISTER sip:192.168.0.101 SIP/2.0
+17:02:37:INFO:From: dede@192.168.0.101 - Contact: 192.168.0.103:57225
+17:02:37:INFO:<<< SIP/2.0 200 0KHE
+17:02:37:INFO:>>> PUBLISH sip:dede@192.168.0.101 SIP/2.0
+17:02:37:INFO:<<< SIP/2.0 200 0KHE
+17:03:25:INFO:>>> REGISTER sip:192.168.0.101 SIP/2.0
+17:03:25:INFO:From: fefef@192.168.0.101 - Contact: 192.168.0.102:60115
+17:03:25:INFO:<<< SIP/2.0 200 0KHE
+17:03:54:INFO:>>> INVITE sip:de@192.168.0.101 SIP/2.0
+17:03:54:INFO:destination de@192.168.0.101
+17:03:54:INFO:<<< INVITE sip:de@192.168.0.101 SIP/2.0
+17:03:54:INFO:>>> SIP/2.0 100 Trying
+17:03:54:INFO:<<< SIP/2.0 100 Trying
+17:03:54:INFO:>>> SIP/2.0 180 Ringing
+17:03:54:INFO:<<< SIP/2.0 180 Ringing
+17:04:06:INFO:>>> SIP/2.0 200 Ok
+17:04:06:INFO:<<< SIP/2.0 200 Ok
+17:04:07:INFO:>>> ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:04:07:INFO:destination de@192.168.0.101
+17:04:07:INFO:<<< ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:04:43:INFO:>>> REFER sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:04:43:INFO:destination de@192.168.0.101
+17:04:43:INFO:<<< REFER sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:04:43:INFO:>>> SIP/2.0 202 Accepted
+17:04:43:INFO:<<< SIP/2.0 202 Accepted
+17:04:44:INFO:>>> INVITE sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:04:44:INFO:destination dede@192.168.0.101
+17:04:44:INFO:<<< INVITE sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:04:44:INFO:>>> INVITE sip:fefef@192.168.0.101 SIP/2.0
+17:04:44:INFO:destination fefef@192.168.0.101
+17:04:44:INFO:<<< INVITE sip:fefef@192.168.0.101 SIP/2.0
+17:04:44:INFO:>>> SIP/2.0 100 Trying
+17:04:44:INFO:<<< SIP/2.0 100 Trying
+17:04:44:INFO:>>> SIP/2.0 200 Ok
+17:04:44:INFO:<<< SIP/2.0 200 Ok
+17:04:44:INFO:>>> SIP/2.0 100 Trying
+17:04:44:INFO:<<< SIP/2.0 100 Trying
+17:04:44:INFO:>>> ACK sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:04:44:INFO:destination dede@192.168.0.101
+17:04:44:INFO:<<< ACK sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:04:44:INFO:>>> NOTIFY sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:04:44:INFO:<<< SIP/2.0 200 0KHE
+17:04:44:INFO:>>> SIP/2.0 180 Ringing
+17:04:44:INFO:<<< SIP/2.0 180 Ringing
+17:04:50:INFO:>>> SIP/2.0 200 Ok
+17:04:50:INFO:<<< SIP/2.0 200 Ok
+17:04:50:INFO:>>> NOTIFY sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:04:50:INFO:<<< SIP/2.0 200 0KHE
+17:04:50:INFO:>>> ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:04:50:INFO:destination fefef@192.168.0.101
+17:04:50:INFO:<<< ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:05:02:INFO:>>> BYE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:05:02:INFO:destination de@192.168.0.101
+17:05:02:INFO:<<< BYE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:05:02:INFO:>>> SIP/2.0 200 Ok
+17:05:02:INFO:<<< SIP/2.0 200 Ok
+17:05:11:INFO:>>> BYE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:05:11:INFO:destination de@192.168.0.101
+17:05:11:INFO:<<< BYE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:05:11:INFO:>>> SIP/2.0 200 Ok
+17:05:11:INFO:<<< SIP/2.0 200 Ok
+17:05:46:INFO:>>> INVITE sip:de@192.168.0.101 SIP/2.0
+17:05:46:INFO:destination de@192.168.0.101
+17:05:46:INFO:<<< INVITE sip:de@192.168.0.101 SIP/2.0
+17:05:46:INFO:>>> SIP/2.0 100 Trying
+17:05:46:INFO:<<< SIP/2.0 100 Trying
+17:05:47:INFO:>>> SIP/2.0 180 Ringing
+17:05:47:INFO:<<< SIP/2.0 180 Ringing
+17:05:52:INFO:>>> SIP/2.0 200 Ok
+17:05:52:INFO:<<< SIP/2.0 200 Ok
+17:05:53:INFO:>>> ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:05:53:INFO:destination de@192.168.0.101
+17:05:53:INFO:<<< ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:06:01:INFO:>>> REFER sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:06:01:INFO:destination de@192.168.0.101
+17:06:01:INFO:<<< REFER sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:06:01:INFO:>>> SIP/2.0 202 Accepted
+17:06:01:INFO:<<< SIP/2.0 202 Accepted
+17:06:01:INFO:>>> INVITE sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:06:01:INFO:destination dede@192.168.0.101
+17:06:01:INFO:<<< INVITE sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:06:01:INFO:>>> INVITE sip:fefef@192.168.0.101 SIP/2.0
+17:06:01:INFO:destination fefef@192.168.0.101
+17:06:01:INFO:<<< INVITE sip:fefef@192.168.0.101 SIP/2.0
+17:06:01:INFO:>>> SIP/2.0 100 Trying
+17:06:01:INFO:<<< SIP/2.0 100 Trying
+17:06:01:INFO:>>> SIP/2.0 200 Ok
+17:06:01:INFO:<<< SIP/2.0 200 Ok
+17:06:01:INFO:>>> SIP/2.0 100 Trying
+17:06:01:INFO:<<< SIP/2.0 100 Trying
+17:06:01:INFO:>>> SIP/2.0 180 Ringing
+17:06:01:INFO:<<< SIP/2.0 180 Ringing
+17:06:01:INFO:>>> ACK sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:06:01:INFO:destination dede@192.168.0.101
+17:06:01:INFO:<<< ACK sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:06:01:INFO:>>> NOTIFY sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:06:01:INFO:<<< SIP/2.0 200 0KHE
+17:06:03:INFO:>>> SIP/2.0 200 Ok
+17:06:03:INFO:<<< SIP/2.0 200 Ok
+17:06:04:INFO:>>> NOTIFY sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:06:04:INFO:<<< SIP/2.0 200 0KHE
+17:06:04:INFO:>>> ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:06:04:INFO:destination fefef@192.168.0.101
+17:06:04:INFO:<<< ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:06:11:INFO:>>> BYE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:06:11:INFO:destination de@192.168.0.101
+17:06:11:INFO:<<< BYE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:06:11:INFO:>>> SIP/2.0 200 Ok
+17:06:11:INFO:<<< SIP/2.0 200 Ok
+17:06:13:INFO:>>> BYE sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:06:13:INFO:destination dede@192.168.0.101
+17:06:13:INFO:<<< BYE sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:06:13:INFO:>>> SIP/2.0 200 Ok
+17:06:13:INFO:<<< SIP/2.0 200 Ok
+17:07:03:INFO:>>> INVITE sip:de@192.168.0.101 SIP/2.0
+17:07:03:INFO:destination de@192.168.0.101
+17:07:03:INFO:<<< INVITE sip:de@192.168.0.101 SIP/2.0
+17:07:03:INFO:>>> SIP/2.0 100 Trying
+17:07:03:INFO:<<< SIP/2.0 100 Trying
+17:07:03:INFO:>>> SIP/2.0 180 Ringing
+17:07:03:INFO:<<< SIP/2.0 180 Ringing
+17:07:05:INFO:>>> SIP/2.0 200 Ok
+17:07:05:INFO:<<< SIP/2.0 200 Ok
+17:07:06:INFO:>>> ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:07:06:INFO:destination de@192.168.0.101
+17:07:06:INFO:<<< ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:07:17:INFO:>>> INVITE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:07:17:INFO:destination de@192.168.0.101
+17:07:17:INFO:<<< INVITE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:07:17:INFO:>>> INVITE sip:fefef@192.168.0.101 SIP/2.0
+17:07:17:INFO:destination fefef@192.168.0.101
+17:07:17:INFO:<<< INVITE sip:fefef@192.168.0.101 SIP/2.0
+17:07:17:INFO:>>> SIP/2.0 100 Trying
+17:07:17:INFO:<<< SIP/2.0 100 Trying
+17:07:17:INFO:>>> SIP/2.0 200 Ok
+17:07:17:INFO:<<< SIP/2.0 200 Ok
+17:07:17:INFO:>>> SIP/2.0 100 Trying
+17:07:17:INFO:<<< SIP/2.0 100 Trying
+17:07:17:INFO:>>> SIP/2.0 180 Ringing
+17:07:17:INFO:<<< SIP/2.0 180 Ringing
+17:07:17:INFO:>>> ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:07:17:INFO:destination de@192.168.0.101
+17:07:17:INFO:<<< ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:07:20:INFO:>>> SIP/2.0 200 Ok
+17:07:20:INFO:<<< SIP/2.0 200 Ok
+17:07:20:INFO:>>> ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:07:20:INFO:destination fefef@192.168.0.101
+17:07:20:INFO:<<< ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:07:29:INFO:>>> BYE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:07:29:INFO:destination fefef@192.168.0.101
+17:07:29:INFO:<<< BYE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:07:29:INFO:>>> SIP/2.0 200 Ok
+17:07:29:INFO:<<< SIP/2.0 200 Ok
+17:07:32:INFO:>>> BYE sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:07:32:INFO:destination dede@192.168.0.101
+17:07:32:INFO:<<< BYE sip:dede@192.168.0.103:57225;transport=udp SIP/2.0
+17:07:32:INFO:>>> SIP/2.0 200 Ok
+17:07:32:INFO:<<< SIP/2.0 200 Ok
+17:07:36:INFO:>>> INVITE sip:fefef@192.168.0.101 SIP/2.0
+17:07:36:INFO:destination fefef@192.168.0.101
+17:07:36:INFO:<<< INVITE sip:fefef@192.168.0.101 SIP/2.0
+17:07:37:INFO:>>> SIP/2.0 100 Trying
+17:07:37:INFO:<<< SIP/2.0 100 Trying
+17:07:37:INFO:>>> SIP/2.0 180 Ringing
+17:07:37:INFO:<<< SIP/2.0 180 Ringing
+17:07:38:INFO:>>> SIP/2.0 200 Ok
+17:07:38:INFO:<<< SIP/2.0 200 Ok
+17:07:39:INFO:>>> ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:07:39:INFO:destination fefef@192.168.0.101
+17:07:39:INFO:<<< ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:07:43:INFO:>>> INVITE sip:de@192.168.0.101 SIP/2.0
+17:07:43:INFO:destination de@192.168.0.101
+17:07:43:INFO:<<< INVITE sip:de@192.168.0.101 SIP/2.0
+17:07:43:INFO:>>> INVITE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:07:43:INFO:destination fefef@192.168.0.101
+17:07:43:INFO:<<< INVITE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:07:43:INFO:>>> SIP/2.0 100 Trying
+17:07:43:INFO:<<< SIP/2.0 100 Trying
+17:07:43:INFO:>>> SIP/2.0 100 Trying
+17:07:43:INFO:<<< SIP/2.0 100 Trying
+17:07:43:INFO:>>> SIP/2.0 200 Ok
+17:07:43:INFO:<<< SIP/2.0 200 Ok
+17:07:43:INFO:>>> ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:07:43:INFO:destination fefef@192.168.0.101
+17:07:43:INFO:<<< ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:07:44:INFO:>>> SIP/2.0 180 Ringing
+17:07:44:INFO:<<< SIP/2.0 180 Ringing
+17:07:49:INFO:>>> SIP/2.0 200 Ok
+17:07:49:INFO:<<< SIP/2.0 200 Ok
+17:07:50:INFO:>>> ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:07:50:INFO:destination de@192.168.0.101
+17:07:50:INFO:<<< ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:08:03:INFO:>>> INVITE sip:dede@192.168.0.103:57225;conf-id=oS43N;transport=udp SIP/2.0
+17:08:03:INFO:destination dede@192.168.0.101
+17:08:03:INFO:<<< INVITE sip:dede@192.168.0.103:57225;conf-id=oS43N;transport=udp SIP/2.0
+17:08:03:INFO:>>> SIP/2.0 100 Trying
+17:08:03:INFO:<<< SIP/2.0 100 Trying
+17:08:03:INFO:>>> SIP/2.0 200 Ok
+17:08:03:INFO:<<< SIP/2.0 200 Ok
+17:08:03:INFO:>>> ACK sip:dede@192.168.0.103:57225;conf-id=oS43N;transport=udp SIP/2.0
+17:08:03:INFO:destination dede@192.168.0.101
+17:08:03:INFO:<<< ACK sip:dede@192.168.0.103:57225;conf-id=oS43N;transport=udp SIP/2.0
+17:08:16:INFO:>>> INVITE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:16:INFO:destination fefef@192.168.0.101
+17:08:16:INFO:<<< INVITE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:16:INFO:>>> SIP/2.0 100 Trying
+17:08:16:INFO:<<< SIP/2.0 100 Trying
+17:08:16:INFO:>>> SIP/2.0 200 Ok
+17:08:16:INFO:<<< SIP/2.0 200 Ok
+17:08:16:INFO:>>> SUBSCRIBE sip:dede@192.168.0.103;conf-id=oS43N;transport=udp SIP/2.0
+17:08:16:INFO:<<< SIP/2.0 200 0KHE
+17:08:16:INFO:>>> ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:16:INFO:destination fefef@192.168.0.101
+17:08:16:INFO:<<< ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:23:INFO:>>> BYE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:08:23:INFO:destination de@192.168.0.101
+17:08:23:INFO:<<< BYE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:08:23:INFO:>>> BYE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:23:INFO:destination fefef@192.168.0.101
+17:08:23:INFO:<<< BYE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:23:INFO:>>> SIP/2.0 200 Ok
+17:08:23:INFO:<<< SIP/2.0 200 Ok
+17:08:24:INFO:>>> SIP/2.0 200 Ok
+17:08:24:INFO:<<< SIP/2.0 200 Ok
+17:08:24:INFO:>>> SUBSCRIBE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:24:INFO:<<< SIP/2.0 200 0KHE
+17:08:37:INFO:>>> INVITE sip:de@192.168.0.101 SIP/2.0
+17:08:37:INFO:destination de@192.168.0.101
+17:08:37:INFO:<<< INVITE sip:de@192.168.0.101 SIP/2.0
+17:08:37:INFO:>>> SIP/2.0 100 Trying
+17:08:37:INFO:<<< SIP/2.0 100 Trying
+17:08:37:INFO:>>> INVITE sip:fefef@192.168.0.101 SIP/2.0
+17:08:37:INFO:destination fefef@192.168.0.101
+17:08:37:INFO:<<< INVITE sip:fefef@192.168.0.101 SIP/2.0
+17:08:37:INFO:>>> SIP/2.0 100 Trying
+17:08:37:INFO:<<< SIP/2.0 100 Trying
+17:08:37:INFO:>>> SIP/2.0 180 Ringing
+17:08:37:INFO:<<< SIP/2.0 180 Ringing
+17:08:37:INFO:>>> SIP/2.0 180 Ringing
+17:08:37:INFO:<<< SIP/2.0 180 Ringing
+17:08:39:INFO:>>> SIP/2.0 200 Ok
+17:08:39:INFO:<<< SIP/2.0 200 Ok
+17:08:39:INFO:>>> SUBSCRIBE sip:dede@192.168.0.103;conf-id=oS43N;transport=udp SIP/2.0
+17:08:39:INFO:<<< SIP/2.0 200 0KHE
+17:08:39:INFO:>>> ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:39:INFO:destination fefef@192.168.0.101
+17:08:39:INFO:<<< ACK sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:40:INFO:>>> SIP/2.0 200 Ok
+17:08:40:INFO:<<< SIP/2.0 200 Ok
+17:08:40:INFO:>>> ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:08:40:INFO:destination de@192.168.0.101
+17:08:40:INFO:<<< ACK sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:08:56:INFO:>>> BYE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:08:56:INFO:destination de@192.168.0.101
+17:08:56:INFO:<<< BYE sip:de@192.168.0.100:49055;transport=udp SIP/2.0
+17:08:57:INFO:>>> SIP/2.0 200 Ok
+17:08:57:INFO:<<< SIP/2.0 200 Ok
+17:08:57:INFO:>>> BYE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:57:INFO:destination fefef@192.168.0.101
+17:08:57:INFO:<<< BYE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:57:INFO:>>> SUBSCRIBE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:57:INFO:<<< SIP/2.0 200 0KHE
+17:08:57:INFO:>>> BYE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:57:INFO:destination fefef@192.168.0.101
+17:08:57:INFO:<<< BYE sip:fefef@192.168.0.102:60115;pn-prid=49B07C78D409562F8B6AECF62598B4EF36A57EF2BDB7BEA4B4A02AA84C39D83B:voip;pn-provider=apns;pn-param=ABCD1234.org.linphone.phone.voip;pn-silent=1;pn-timeout=0;transport=udp SIP/2.0
+17:08:57:INFO:>>> SIP/2.0 200 Ok
+17:08:57:INFO:<<< SIP/2.0 200 Ok
+17:09:47:INFO:>>> REGISTER sip:192.168.0.101 SIP/2.0
+17:09:47:INFO:From: fefef@192.168.0.101 - Contact: 192.168.0.102:61061
+17:09:47:INFO:<<< SIP/2.0 200 0KHE
+17:09:59:INFO:>>> REGISTER sip:192.168.0.101 SIP/2.0
+17:09:59:INFO:<<< SIP/2.0 200 OkHE
+17:10:10:INFO:>>> PUBLISH sip:dede@192.168.0.101 SIP/2.0
+17:10:10:INFO:<<< SIP/2.0 200 0KHE
+17:10:10:INFO:>>> REGISTER sip:192.168.0.101 SIP/2.0
+17:10:10:INFO:<<< SIP/2.0 200 OkHE
+18:57:48:INFO:>>> REGISTER sip:192.168.0.103:5060 SIP/2.0
+18:57:48:INFO:From: re@192.168.0.103 - Contact: 192.168.0.101:39204
+18:57:48:INFO:<<< SIP/2.0 200 0KHE
+18:57:48:INFO:>>> REGISTER sip:192.168.0.103 SIP/2.0
+18:57:48:INFO:From: rere@192.168.0.103 - Contact: 192.168.0.101:39204
+18:57:48:INFO:<<< SIP/2.0 200 0KHE
+18:57:48:INFO:>>> REGISTER sip:192.168.0.103:5060 SIP/2.0
+18:57:48:INFO:From: re@192.168.0.103 - Contact: 192.168.0.101:39204
+18:57:48:INFO:<<< SIP/2.0 200 0KHE
+18:57:48:INFO:>>> REGISTER sip:192.168.0.103 SIP/2.0
+18:57:48:INFO:From: rere@192.168.0.103 - Contact: 192.168.0.101:39204
+18:57:48:INFO:<<< SIP/2.0 200 0KHE
+18:57:48:INFO:>>> REGISTER sip:192.168.0.103:5060 SIP/2.0
+18:57:48:INFO:From: re@192.168.0.103 - Contact: 192.168.0.101:39204
+18:57:48:INFO:<<< SIP/2.0 200 0KHE
+18:57:48:INFO:>>> REGISTER sip:192.168.0.103 SIP/2.0
+18:57:48:INFO:From: rere@192.168.0.103 - Contact: 192.168.0.101:39204
+18:57:48:INFO:<<< SIP/2.0 200 0KHE
+19:51:48:INFO:>>> REGISTER sip:192.168.0.103:5060 SIP/2.0
+19:51:48:INFO:From: re@192.168.0.103 - Contact: 192.168.0.101:39204
+19:51:48:INFO:<<< SIP/2.0 200 0KHE
+19:51:48:INFO:>>> REGISTER sip:192.168.0.103 SIP/2.0
+19:51:48:INFO:From: rere@192.168.0.103 - Contact: 192.168.0.101:39204
+19:51:48:INFO:<<< SIP/2.0 200 0KHE
+20:45:48:INFO:>>> REGISTER sip:192.168.0.103:5060 SIP/2.0
+20:45:48:INFO:From: re@192.168.0.103 - Contact: 192.168.0.101:39204
+20:45:48:INFO:<<< SIP/2.0 200 0KHE
+20:45:48:INFO:>>> REGISTER sip:192.168.0.103 SIP/2.0
+20:45:48:INFO:From: rere@192.168.0.103 - Contact: 192.168.0.101:39204
+20:45:48:INFO:<<< SIP/2.0 200 0KHE
