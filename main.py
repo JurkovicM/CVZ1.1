@@ -7,8 +7,10 @@ import socketserver
 import time
 import logging
 
+
 def start():
-    logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s', filename='proxy.log', level=logging.INFO,
+    FORMAT = '%(asctime)s:%(levelname)s:%(message)s'
+    logging.basicConfig(format=FORMAT, filename='proxy.log', level=logging.INFO,
                         datefmt='%H:%M:%S')
     logging.info(time.strftime("%a, %d %b %Y %H:%M:%S ", time.localtime()))
     hostname = socket.gethostname()
@@ -26,6 +28,7 @@ def start():
     print("Proxy server started at <%s:%s>" % (ipaddress, PORT))
     server.serve_forever()
     pass
+
 
 if __name__ == "__main__":
     start()
